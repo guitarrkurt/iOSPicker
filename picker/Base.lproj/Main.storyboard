@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="picker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjp-dt-5K5">
+                                <rect key="frame" x="0.0" y="113" width="600" height="162"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vme-R7-ahX">
+                                <rect key="frame" x="273" y="454" width="54" height="30"/>
+                                <state key="normal" title="Agregar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botonAgregar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDa-ut-WRF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bB-JA-LDV">
+                                <rect key="frame" x="279" y="283" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9D1-hp-jqY">
+                                <rect key="frame" x="252" y="337" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="73B-q1-Kcw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9D1-hp-jqY" firstAttribute="top" secondItem="3bB-JA-LDV" secondAttribute="bottom" constant="33" id="5tc-KA-4KO"/>
+                            <constraint firstAttribute="trailing" secondItem="Xjp-dt-5K5" secondAttribute="trailing" id="EmE-Yq-Fpc"/>
+                            <constraint firstItem="3bB-JA-LDV" firstAttribute="top" secondItem="Xjp-dt-5K5" secondAttribute="bottom" constant="8" symbolic="YES" id="K8k-xu-N6U"/>
+                            <constraint firstItem="Xjp-dt-5K5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RIf-DN-OVT"/>
+                            <constraint firstItem="3bB-JA-LDV" firstAttribute="centerX" secondItem="9D1-hp-jqY" secondAttribute="centerX" id="UMM-Im-pgg"/>
+                            <constraint firstItem="Xjp-dt-5K5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="izd-14-ipd"/>
+                            <constraint firstItem="Vme-R7-ahX" firstAttribute="centerX" secondItem="9D1-hp-jqY" secondAttribute="centerX" id="sFB-8G-gV1"/>
+                            <constraint firstItem="Vme-R7-ahX" firstAttribute="top" secondItem="9D1-hp-jqY" secondAttribute="bottom" constant="87" id="so1-Oi-kcF"/>
+                            <constraint firstItem="3bB-JA-LDV" firstAttribute="centerX" secondItem="Xjp-dt-5K5" secondAttribute="centerX" id="xvz-9r-E3W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="3bB-JA-LDV" id="uCv-YI-kxi"/>
+                        <outlet property="picker" destination="Xjp-dt-5K5" id="tsU-8Q-CXF"/>
+                        <outlet property="textFile" destination="9D1-hp-jqY" id="zOj-K7-xBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
